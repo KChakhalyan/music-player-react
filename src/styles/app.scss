@@ -3,6 +3,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+:root {
+	font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2,
+h3 {
+	color: rgb(46, 46, 46);
+}
 @import './player.scss';
 @import './song.scss';
