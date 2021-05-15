@@ -1,8 +1,12 @@
 import React from 'react';
 
-function LibrarySong({ song }) {
+function LibrarySong({ id, songs, song, setCurrentSong }) {
+	const songSelectHandler = () => {
+		const selectedSong = songs.filter((state) => state.id === id);
+		setCurrentSong(selectedSong[0]);
+	};
 	return (
-		<div className="library-song">
+		<div onClick={songSelectHandler} className="library-song">
 			<img src={song.cover} alt={song.name} />
 			<div className="song-desc">
 				<h3>{song.name}</h3>
