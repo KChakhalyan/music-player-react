@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LibraryComponent from './components/LibraryComponent';
 import PlayerComponent from './components/PlayerComponent';
 import SongComponent from './components/SongComponent';
 import './styles/app.scss';
@@ -11,7 +12,12 @@ function App() {
 	return (
 		<div className="App">
 			<SongComponent currentSong={currentSong} />
-			<PlayerComponent setIsPlaying={setIsPlaying} isPlaying={isPlaying} currentSong={currentSong} />
+			<PlayerComponent
+				setIsPlaying={setIsPlaying}
+				isPlaying={isPlaying}
+				currentSong={currentSong}
+			/>
+			<LibraryComponent songs={songs} />
 		</div>
 	);
 }
