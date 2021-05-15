@@ -6,6 +6,8 @@
 	height: 100%;
 	box-shadow: 2px 2px 50px rgb(197, 197, 197);
 	overflow: scroll;
+	background-color: white;
+
 	h2 {
 		padding: 1.2em;
 	}
@@ -41,4 +43,20 @@
 		color: gray;
 		font-size: 0.8em;
 	}
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(212, 211, 211, 0.521) transparent;
+}
+*::-webkit-scrollbar {
+	width: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(212, 211, 211, 0.521);
+	border-radius: 20px;
+	border: transparent;
 }
