@@ -7,9 +7,10 @@ const LibraryComponent = ({
 	audioref,
 	isPlaying,
 	setSongs,
+	libraryStatus,
 }) => {
 	return (
-		<div className="library">
+		<div className={`library ${libraryStatus ? 'active-library' : ''}`}>
 			<h2>Library</h2>
 			<div>
 				{songs.map((song) => (
