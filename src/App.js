@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import PlayerComponent from './components/PlayerComponent';
 import SongComponent from './components/SongComponent';
 import './styles/app.scss';
-import data from './util';
+import data from './data';
 
 function App() {
 	const [songs, setSongs] = useState(data());

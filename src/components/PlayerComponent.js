@@ -6,6 +6,7 @@ import {
 	faAngleRight,
 	faPause,
 } from '@fortawesome/free-solid-svg-icons';
+import { playAudio } from '../util';
 
 const PlayerComponent = ({
 	audioref,
@@ -63,10 +64,12 @@ const PlayerComponent = ({
 		if (direction === 'skip-back') {
 			if ((currentIndex - 1) % songs.length === -1) {
 				setCurrentSong(songs[songs.length - 1]);
+				playAudio(isPlaying, audioref);
 				return;
 			}
 			setCurrentSong(songs[(currentIndex - 1) % songs.length]);
 		}
+		playAudio(isPlaying, audioref);
 	};
 
 	return (
@@ -80,7 +83,7 @@ const PlayerComponent = ({
 					type="range"
 					onChange={dragHandler}
 				/>
-				<p>{getTime(songInfo.duration)}</p>
+				<p>{songInfo.duration ? getTime(songInfo.duration) : '0:00'}</p>
 			</div>
 			<div className="play-control">
 				<FontAwesomeIcon
