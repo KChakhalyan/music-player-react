@@ -4,6 +4,7 @@ function LibrarySong({
 	id,
 	songs,
 	song,
+	currentSong,
 	setCurrentSong,
 	audioref,
 	isPlaying,
@@ -26,6 +27,7 @@ function LibrarySong({
 			}
 		});
 		setSongs(newSongs);
+
 		setCurrentSong(selectedSong[0]);
 		if (isPlaying) {
 			const playPromise = audioref.current.play();

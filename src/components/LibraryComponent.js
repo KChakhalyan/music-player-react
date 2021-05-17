@@ -4,6 +4,7 @@ import LibrarySong from './LibrarySong';
 const LibraryComponent = ({
 	songs,
 	setCurrentSong,
+	currentSong,
 	audioref,
 	isPlaying,
 	setSongs,
@@ -23,6 +24,7 @@ const LibraryComponent = ({
 						audioref={audioref}
 						isPlaying={isPlaying}
 						setSongs={setSongs}
+						currentSong={currentSong}
 					/>
 				))}
 			</div>

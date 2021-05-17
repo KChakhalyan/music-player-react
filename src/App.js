@@ -40,10 +40,12 @@ function App() {
 				songInfo={songInfo}
 				audioref={audioRef}
 				songs={songs}
+				setSongs={setSongs}
 			/>
 			<LibraryComponent
 				audioref={audioRef}
 				songs={songs}
+				currentSong={currentSong}
 				setCurrentSong={setCurrentSong}
 				isPlaying={isPlaying}
 				setSongs={setSongs}
